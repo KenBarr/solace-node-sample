@@ -30,7 +30,7 @@ solace-node-sample-7679d547cb-222lt          1/1     Running   0          14s
 
 ## Go into pod and run a publisher
 * kubectl exec -it solace-node-sample-7679d547cb-222lt bash
-* bash-5.0# node solace-samples-nodejs/src/basic-samples/TopicPublisher.js ws://pubsubplus-dev-1588077956-pubsubplus
+* bash-5.0# node solace-samples-nodejs/src/basic-samples/TopicPublisher.js ws://pubsubplus-dev-1588077956-pubsubplus publisher@default default
 
 ## Look at logs and see message sent.
 ```
@@ -49,7 +49,7 @@ Binary Attachment:                      len=14
 # How repo was built
 * helm create solace-node-sample
 
-* Edit Chart.yaml and values.yaml to move from nginx to node:lts-apline as will as add psb.name as a traget for node samples
+* Edit Chart.yaml and values.yaml to move from nginx to node:lts-apline as well as add psb.name as a traget for node samples
 
 * Delete folder templates/test and files templates/ingress.yaml and templates/service.yaml as we are not receiving any connections only making them.
 
