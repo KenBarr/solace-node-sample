@@ -10,7 +10,7 @@ image:
 
 psb:
   # DNS name of the pubsubplus service
-  name: <MUST SPECIFY SERVICE NAME>
+  name: MUST_SPECIFY_SERVICE_NAME
 
 imagePullSecrets: []
 nameOverride: ""
