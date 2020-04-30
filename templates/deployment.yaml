@@ -38,6 +38,8 @@ spec:
               git clone https://github.com/SolaceSamples/solace-samples-nodejs
               cd solace-samples-nodejs
               npm init -y
+              echo -e "#!/bin/bash\n node solace-samples-nodejs/src/basic-samples/TopicPublisher.js ws://{{.Values.psb.name}}:8008 publisher@default default" > publish.sh
+              chmod +x publish.sh
               node src/basic-samples/TopicSubscriber.js ws://{{.Values.psb.name}}:8008 subscriber@default default
       {{- with .Values.nodeSelector }}
       nodeSelector:

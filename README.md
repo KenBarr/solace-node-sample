@@ -28,9 +28,8 @@ solace-node-sample-7679d547cb-222lt          1/1     Running   0          14s
 [13:45:13] === Ready to receive messages. ===
 ```
 
-## Go into pod and run a publisher
-* kubectl exec -it solace-node-sample-7679d547cb-222lt bash
-* bash-5.0# node solace-samples-nodejs/src/basic-samples/TopicPublisher.js ws://pubsubplus-dev-1588077956-pubsubplus publisher@default default
+## Publish a message
+* kubectl exec -it solace-node-sample-7679d547cb-222lt solace-samples-nodejs/publish.sh
 
 ## Look at logs and see message sent.
 ```
